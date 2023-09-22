@@ -210,7 +210,7 @@
 
     // fibonacci(0,1,10);
 
-                // variable scope
+                // variable scope (local , global, static)
 
     // $name = "Earth";    // global scope
 
@@ -240,3 +240,140 @@
 
     // doSomething();
     // doSomething();
+
+    // function test($x=5){
+    //     return $x*$x;
+    // }
+
+    // echo test();
+
+                // =========   callback function   ========= //
+
+                // calculator using callback function
+    
+    // function add($x,$y){
+    //     return $x+$y;
+    // }
+    
+    // function sub($x,$y){
+    //     return $x-$y;
+    // }
+
+    // function mul($x,$y){
+    //     return $x*$y;
+    // }
+
+    // function div($x,$y){
+    //     return $x/$y;
+    // }
+    
+    // function mod($x,$y){
+    //     return $x%$y;
+    // }
+
+    // function math($x,$y,$cb){   // callback function
+    //     if(is_callable($cb))
+    //     {
+    //         return $cb($x,$y);
+    //     }
+    //     else
+    //     {
+    //         return "Invalid callback function";
+    //     }
+        
+    // }
+
+    // echo math(2,3,"add").PHP_EOL;   // valid
+    // echo math(5,2,"sub").PHP_EOL;   // valid
+    // echo math(2,3,"mul").PHP_EOL;   // valid
+    // echo math(6,3,"div").PHP_EOL;   // valid
+    // echo math(32,15,"mod").PHP_EOL; // valid
+    // echo math(32,15,"sayHello").PHP_EOL;    // valid
+
+    
+                // find even number using callback function   -- array_filter() function
+
+    // function isEven($x){
+    //     return $x%2==0;
+    // }
+
+    // $numbers = [2,5,7,8,12,34,54,77,1,4,56,33];
+
+    // $evens = array_filter($numbers,"isEven");
+
+    // print_r($evens);
+
+
+                // find male or female using callback function   -- array_filter() function
+
+    // function isMale($x){
+    //     return $x["gender"] == "male";
+    // }
+
+    // function isFemale($x){
+    //     return $x["gender"] == "female";
+    // }
+
+    // $person = [
+    //     ["name"=>"Ali","gender"=>"male"],
+    //     ["name"=>"Vahid","gender"=>"male"],
+    //     ["name"=>"Reza","gender"=>"female"],
+    //     ["name"=>"Maryam","gender"=>"female"],
+    //     ["name"=>"Sara","gender"=>"female"],
+    //     ["name"=>"Zahra","gender"=>"female"],
+    //     ["name"=>"Mohammad","gender"=>"male"]
+    // ];
+
+    // $males = array_filter($person,"isMale");
+    // $females = array_filter($person,"isFemale");
+
+    // print_r($males);
+    // print_r($females);
+
+
+                // square or cube using callback function   -- array_map() function
+
+    // function cube($x){
+    //     return $x*$x*$x;
+    // }
+
+    // function square($x){
+    //     return $x*$x;
+    // }
+
+    // $numbers = [2,5,7,8,12];
+
+    // $cubes = array_map("cube",$numbers);
+    // $squares = array_map("square",$numbers);
+
+    // print_r($cubes);
+    // print_r($squares);
+
+                // usort using custom callback function
+
+    // $books = [
+    //     ["id" => 1, "title" => "Harry Potter 1", "author" => "J.K. Rowling"],
+    //     ["id" => 1, "title" => "Harry Potter 2", "author" => "J.K. Rowling"],
+    //     ["id" => 2, "title" => "Lord of the Rings", "author" => "J.R.R. Tolkien"],
+    //     ["id" => 3, "title" => "Catch-22", "author" => "Joseph Heller"],
+    //     ["id" => 4, "title" => "Imaginary", "author" => "AB"],
+    //     ["id" => 5, "title" => "Harry Potter 3", "author" => "J.K. Rowling"],
+    //     ["id" => 6, "title" => "Harry Potter 4", "author" => "WXYZ"],       
+    // ];
+
+    // function sortByAuthor($a,$b){
+    //     //return strcmp($a["author"],$b["author"]);
+
+    //     if(strlen($a['author']) == strlen($b['author'])){
+    //         return 0;
+    //     }else if(strlen($a['author']) > strlen($b['author'])){
+    //         return 1;                                                   // reverse value will change the sort direction
+    //     }else{
+    //         return -1;                                                  // reverse value will change the sort direction
+            
+    //     }
+    // }
+
+    // usort($books,"sortByAuthor");
+
+    // print_r($books);
