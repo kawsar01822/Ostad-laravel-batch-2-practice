@@ -13,7 +13,7 @@ class Owner
     }
 
     public function displayOwnerDetails{
-        echo "Owner Name: " . $this->name . "<br>";
-        echo "Apartment Number: " . $this->apartment->getApartmentNumber() . "<br>";
+        echo "Owner Name: " . $this->name . "\n";
+        echo "Apartment Number: " . $this->apartment->getApartmentNumber() . "\n";
     }
 }
