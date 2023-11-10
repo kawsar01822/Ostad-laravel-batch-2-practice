@@ -1,0 +1,1 @@
+[{"name":"Kawsar","age":20,"address":"Dhaka","marks":{"bangla":80,"english":70,"math":90,"science":80,"social":70,"religion":80}},{"name":"Khair","age":22,"address":"Chittagong","marks":{"bangla":40,"english":30,"math":70,"science":90,"social":85,"religion":100}}]
